@@ -8,6 +8,10 @@
         Title="曲线上的点" Height="450" Width="800">
     <Canvas x:Name="ContentCanvas">
         <TextBlock Text="鼠标左键点击" Margin="10" Foreground="Gray"/>
+        <ComboBox x:Name="SelectionComboBox" Width="100" Canvas.Left="200" Canvas.Top="10">
+            <ComboBoxItem Content="获取纵坐标" IsSelected="True" x:Name="OrdinateComboBoxItem" Selected="OrdinateComboBoxItem_OnSelected" ></ComboBoxItem>
+            <ComboBoxItem Content="获取最近的点" x:Name="ClosedPointComboBoxItem" Selected="ClosedPointComboBoxItem_OnSelected"></ComboBoxItem>
+        </ComboBox>
         <Path x:Name="GeometryPath"
               Data="M146,203 C228,222 95,370 384,368 C345,248 486,306 500,120 C100,120 0,100 90,170"
               Stroke="Black" StrokeThickness="1"
